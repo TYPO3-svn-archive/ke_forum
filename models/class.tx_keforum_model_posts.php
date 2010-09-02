@@ -570,14 +570,12 @@ class tx_keforum_model_posts extends tx_lib_object {
 	 * function getLastPostOfThread
 	 */
 	function getLastPostOfThread($threadUid){
-		
 		$parameters=new tx_lib_parameters($this->controller);
-		// $parameters->set("limit",1);
-		$parameters->set("limit",$this->controller->configurations->get('pagination.itemsPerPage'));
+		$limit = $this->controller->configurations->get('showLatestPosts') > 1 ? $this->controller->configurations->get('showLatestPosts') : 1;
+		$parameters->set("limit",$limit);
 		$parameters->set("thread",$threadUid);
 		$parameters->set("orderBy",'tstamp DESC');
 		$parameters->set("searchphrase","");
-		
 		$this->load($parameters);
 		$out=$this->get("posts");
 		
