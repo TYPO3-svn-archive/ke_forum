@@ -29,7 +29,6 @@
 
 
 
-
 /**
  * Class that implements the view for posts_add.
  *
