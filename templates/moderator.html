@@ -1,0 +1,63 @@
+{literal}
+  <script type="text/javascript">
+    function checkeall() {
+      for (var i = 0; i < document.forms[0].elements.length; i++) {
+	document.forms[0].elements[i].checked = true;
+      }
+    }
+  </script>
+{/literal}
+
+<div class="tx-keforum">
+  <form method="post" action="{$url_form}">
+    <div id="keforum-mainContainerSingleThread">
+      <div id="keforum-mainSubContainerSingleThread">
+	<div id="tableContainerSingleThread">
+	  <table>
+	    <thead>
+	      <tr>
+		<th>%%%moderate.tableheader.accept%%%</th><th>%%%moderate.tableheader.author%%%</th><th>%%%moderate.tableheader.posts%%%</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	      {foreach item=row from=$posts}
+		<tr class="{cycle values="firstRow,secondRow"}">
+		  <td><input type="checkbox" name="tx_keforum[accept][]" value="{$row.uid}" id="accept_{$row.uid}"/></td>
+		  <td class="firstCell">
+		    <div class="singleThreadContainer">
+		      <div class="singleThreadAuthor">
+			{if $row._author.0}
+			  <!--<a href="mailto:{$row._author.0.email}">-->{$row._author.0.username}<!--</a>--><br />
+			  <span class="bold">%%%moderate.member_since.0%%%</span> %%%moderate.member_since.1%%%  {$row._author.0.crdate|date_format:$dateFormatMember}<br />
+			  <span class="bold">%%%moderate.posts%%%:</span> {$row._author.0.numberOfPosts}<br />
+			  <a href="#" class="singleThreadPMLink">%%%moderate.pm_to%%% {$row._author.0.username}</a>
+			{/if}
+		      </div>
+		    </div>
+		  </td>
+		  <td class="singleThreadPost">
+		    <div class="singleThreadPostContainer">
+		      <p class="forumDateSingleThread">
+			<span class="bold">%%%moderate.date%%%:</span> {$row.tstamp|date_format:$dateFormat}
+		      </p>
+		    <p>{$row.content|truncate:200}</p>
+		  </td>
+		</tr>
+	      {/foreach}
+	    </tbody>
+	  </table>
+	  <table id="keforum-footerSingleThread" cellspacing="0">
+	    <tr>
+	      <td id="newThemeButtonCell">
+		<div id="newThemeButtonContainer">
+		  <input class="newThemeButton" type="submit" value="%%%moderate.submit%%%">
+		  <input class="newThemeButton" type="button" value="%%%moderate.checkall%%%" onClick="checkeall()">
+		</div>
+	      </td>
+	    </tr>
+	  </table>
+	</div>
+      </div>
+    </div>
+  </form>
+</div>

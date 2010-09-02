@@ -1,0 +1,36 @@
+<html>
+    <head></head>
+    <body>
+
+	Hallo {$recipient_name},<br /><br />
+	hier im {$forumname} wurde auf einen Ihrer Beiträge geantwortet. <br /><br />
+	
+	<table>
+	    <tr>
+		<td><b>Rubrik:</b></td>
+		<td>{$category.title}</td>
+	    </tr>
+	    <tr>
+		<td><b>Thema:</b></td>
+		<td>{$thread.title}</td>
+	    </tr>
+	    <tr>
+		<td><b>Benutzer:</b></td>
+		<td>{$username}</td>
+	    </tr>
+	    <tr>
+		<td><b>Datum:</b></td>
+		<td>{$post.tstamp|date_format:$dateFormat}</td>
+	    </tr>
+	</table>
+	<br />
+	<b>Beitrag:</b><br />
+	{$text}<br /><br />
+	<a href="{$linkPost}">zum Beitrag</a><br />
+	<p>Sie erhalten diese E-Mail, weil Sie im {$forumname} die Benachrichtigung Antworten auf eigene Beiträge aktiviert haben. </p>
+	<p>Ihre persönlichen Einstellungen können Sie <a href=" {$linkProfile}">hier</a> ändern.</p>
+	<br /><br />
+	<p>{$footer}</p>
+
+    </body>
+</html>

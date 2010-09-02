@@ -1,0 +1,79 @@
+tx_keforum {	
+	# cat=tx_keforum//100; type=text; label= Template Directory: Path to the directory where the template files are stored
+	pathToTemplateDirectory = EXT:ke_forum/templates/
+	
+	# cat=tx_keforum//110 type=text; label= CSS File: Path to the CSS file that will be included
+	cssFile = EXT:ke_forum/res/css/ke_forum.css
+	
+	# cat=tx_keforum//120 type=text; label= Storage PID: PID of the sys folder where the forum records are stored
+	pid.storage=
+	# cat=tx_keforum//130 type=text; label= Categories PID: PID of the page where the category plugin is inserted
+	pid.categories=
+	# cat=tx_keforum//140 type=text; label= Threads PID: PID of the page where the threads plugin is inserted
+	pid.threads=
+	# cat=tx_keforum//145 type=text; label= Add Thread PID: PID of the page where the "add thread" plugin is inserted
+	pid.threads_add=
+	# cat=tx_keforum//150 type=text; label= Posts PID: PID of the page where the posts plugin is inserted
+	pid.posts=
+	# cat=tx_keforum//155 type=text; label= Add Post PID: PID of the page where the "add post" plugin is inserted
+	pid.posts_add=
+	# cat=tx_keforum//160 type=text; label= Search PID: PID of the page where the search plugin is inserted
+	pid.search=
+	# cat=tx_keforum//170 type=text; label= Moderation PID: PID of the page where the moderation plugin is inserted
+	pid.moderate=
+	# cat=tx_keforum//180 type=text; label= "Edit Profile" PID: PID of the page where the "edit profile" function is inserted
+	pid.profile=
+	# cat=tx_keforum//185 type=text; label= Printview PID: PID of the page where the printview is configured
+	pid.printview=
+	
+	# cat=tx_keforum//190 type=text; label= Number of entries in teaser view: The number of entries that are shown in teaser view
+	teaser.count=5
+	# cat=tx_keforum//200 type=text; label= Number of characters in teaser view: The elements names in teaser view will be cropped after this number of characters
+	teaser.maxChars=30
+	
+	# cat=tx_keforum//210 type=text; label= Default date format: The default format string for dates; see http://de3.php.net/manual/de/function.strftime.php for documentation
+	date.format.default=%e. %B %Y, %H:%M Uhr 
+	# cat=tx_keforum//220 type=text; label= Short date format: The format string for short dates; see http://de3.php.net/manual/de/function.strftime.php for documentation
+	date.format.short=%e.%m %Y, %H:%M
+	# cat=tx_keforum//230 type=text; label= Member date format: The format string for "member since"; see http://de3.php.net/manual/de/function.strftime.php for documentation
+	date.format.member=%d. %B.%Y
+	# cat=tx_keforum//240 type=text; label= Teaser date format: The format string for dates in teaser view; see http://de3.php.net/manual/de/function.strftime.php for documentation
+	date.format.teaser=%d.%m.%Y
+	
+	# cat=tx_keforum//250 type=text; label= Notification email sender name: The sender name that is used when a notification is sent
+	mail.sender_name=forum@domain.de
+	# cat=tx_keforum//260 type=text; label= Notification email sender email: The email address that is used as sender when a notification mail is sent
+	mail.sender_email=noreply@domain.de
+	# cat=tx_keforum//270 type=text; label= Notification email forum name: The forum name that is used in notification emails
+	mail.forum_name=ke_forum
+	# cat=tx_keforum//280 type=text; label= Notification email footer: The footer that is used in notification mails
+	mail.footer=Your forum team
+	# cat=tx_keforum//290 type=text; label= Notification mail subject for single notification: The subject that is used for the notifications mail when an answer is created
+	mail.subject.notify_single=New forum post
+	# cat=tx_keforum//300 type=text; label= Notification mail subject for daily report: The subject that is used for daily reports
+	mail.subject.notify_cron=New forum post
+	# cat=tx_keforum//310 type=text; label= Moderator notification mail subject: The subject for moderator notifications
+	mail.subject.notify_moderator=New forum post
+	# cat=tx_keforum//320 type=text; label= Daily report sending interval: The interval for sending the daily report
+	mail.interval=1440
+	# cat=tx_keforum//330 type=text; label= Daily report - Number of mails sent per request: The number of daily reports that are sent by once
+	mail.mailsPerRequest =2
+	
+	# cat=tx_keforum//340 type=text; label= Number of entries per page: How many entries are shown per page
+	pagination.itemsPerPage = 5
+	# cat=tx_keforum//350 type=text; label= Number of items in pagebrowser: How many page entries are shown in page browser
+	pagination.itemsInBrowser = 3
+	
+	# cat=tx_keforum//360 type=int+; label= Show X latest posts in "add post" form
+	add.showLatestPosts = 2
+	
+	# cat=tx_keforum//400 type=boolean; label= Allow attachment when creating new thread?
+	attachment.allowInNewThread = 1
+	# cat=tx_keforum//410 type=boolean; label= Allow file upload when creating new post?
+	attachment.allowInNewPost = 1
+	# cat=tx_keforum//420 type=text; label= Maximum filesize for attachments (in kB)
+	attachment.maxFileSize = 2048
+	# cat=tx_keforum//430 type=text; label= Allowed filetypes for attachments
+	attachment.allowedTypes = gif,pdf,jpeg,jpg,txt,doc,bmp
+	
+}

@@ -1,0 +1,52 @@
+
+includeLibs.tx_div = EXT:div/class.tx_div.php
+
+# Common configuration
+plugin.tx_keforum_mvc8.configuration {
+  pathToTemplateDirectory = EXT:ke_forum/templates/
+  pathToLanguageFile = EXT:ke_forum/locallang.xml
+  entryClassName =
+  ajaxPageType = 110124
+}
+
+
+includeLibs.tx_keforum_controller_add_post = EXT:ke_forum/controllers/class.tx_keforum_controller_add_post.php
+
+plugin.tx_keforum.controller_add_post = USER_INT
+plugin.tx_keforum.controller_add_post < plugin.tx_keforum_mvc8.configuration
+plugin.tx_keforum.controller_add_post {
+  userFunc = tx_keforum_controller_add_post->main
+  defaultAction = add
+}
+
+tt_content.list.20.ke_forum_mvc8 =< plugin.tx_keforum.controller_add_post
+
+
+# INCLUDE CSS
+page.includeCSS.forum = {$tx_keforum.cssFile}
+
+# LOAD CONSTANTS VALUES
+plugin.tx_keforum.controller_add_post.pathToTemplateDirectory = {$tx_keforum.pathToTemplateDirectory}
+plugin.tx_keforum.controller_add_post.pid.posts = {$tx_keforum.pid.posts}
+plugin.tx_keforum.controller_add_post.pid.posts_add = {$tx_keforum.pid.posts_add}
+plugin.tx_keforum.controller_add_post.pid.categories = {$tx_keforum.pid.categories}
+plugin.tx_keforum.controller_add_post.pid.threads = {$tx_keforum.pid.threads}
+plugin.tx_keforum.controller_add_post.pid.threads_add = {$tx_keforum.pid.threads_add}
+plugin.tx_keforum.controller_add_post.pid.search = {$tx_keforum.pid.search}
+plugin.tx_keforum.controller_add_post.pid.storage = {$tx_keforum.pid.storage}
+plugin.tx_keforum.controller_add_post.pid.profile = {$tx_keforum.pid.profile}
+
+plugin.tx_keforum.controller_add_post.date.format.default = {$tx_keforum.date.format.default}
+plugin.tx_keforum.controller_add_post.mail.sender_name={$tx_keforum.mail.sender_name}
+plugin.tx_keforum.controller_add_post.mail.sender_email={$tx_keforum.mail.sender_email}
+plugin.tx_keforum.controller_add_post.mail.forum_name={$tx_keforum.mail.forum_name}
+plugin.tx_keforum.controller_add_post.mail.footer={$tx_keforum.mail.footer}
+plugin.tx_keforum.controller_add_post.mail.subject.notify_single={$tx_keforum.mail.subject.notify_single}
+plugin.tx_keforum.controller_add_post.mail.subject.notify_cron={$tx_keforum.mail.subject.notify_cron}
+plugin.tx_keforum.controller_add_post.mail.subject.notify_moderator={$tx_keforum.mail.subject.notify_moderator}
+
+plugin.tx_keforum.controller_add_post.showLatestPosts = {$tx_keforum.add.showLatestPosts}
+
+plugin.tx_keforum.controller_add_post.attachment.allowed = {$tx_keforum.attachment.allowInNewPost}
+plugin.tx_keforum.controller_add_post.attachment.maxFileSize = {$tx_keforum.attachment.maxFileSize}
+plugin.tx_keforum.controller_add_post.attachment.allowedTypes = {$tx_keforum.attachment.allowedTypes}

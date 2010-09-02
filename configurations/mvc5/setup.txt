@@ -1,0 +1,37 @@
+
+includeLibs.tx_div = EXT:div/class.tx_div.php
+
+# Common configuration
+plugin.tx_keforum_mvc5.configuration {
+  pathToTemplateDirectory = EXT:ke_forum/templates/
+  pathToLanguageFile = EXT:ke_forum/locallang.xml
+  entryClassName =
+  ajaxPageType = 110124
+}
+
+
+includeLibs.tx_keforum_controller_teaser = EXT:ke_forum/controllers/class.tx_keforum_controller_teaser.php
+
+plugin.tx_keforum.controller_teaser = USER_INT
+plugin.tx_keforum.controller_teaser < plugin.tx_keforum_mvc5.configuration
+plugin.tx_keforum.controller_teaser {
+  userFunc = tx_keforum_controller_teaser->main
+  defaultAction = teaser
+}
+
+tt_content.list.20.ke_forum_mvc5 =< plugin.tx_keforum.controller_teaser
+
+
+# INCLUDE CSS
+page.includeCSS.forum = {$tx_keforum.cssFile}
+
+# LOAD CONSTANTS VALUES
+plugin.tx_keforum.controller_teaser.pathToTemplateDirectory = {$tx_keforum.pathToTemplateDirectory}
+plugin.tx_keforum.controller_teaser.pid.categories = {$tx_keforum.pid.categories}
+plugin.tx_keforum.controller_teaser.pid.threads = {$tx_keforum.pid.threads}
+plugin.tx_keforum.controller_teaser.pid.posts = {$tx_keforum.pid.posts}
+plugin.tx_keforum.controller_teaser.pid.search = {$tx_keforum.pid.search}
+plugin.tx_keforum.controller_teaser.pid.storage = {$tx_keforum.pid.storage}
+plugin.tx_keforum.controller_teaser.date.format.default = {$tx_keforum.date.format.teaser}
+plugin.tx_keforum.controller_teaser.count={$tx_keforum.teaser.count}
+plugin.tx_keforum.controller_teaser.maxChars={$tx_keforum.teaser.maxChars}

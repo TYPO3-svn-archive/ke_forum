@@ -1,0 +1,44 @@
+
+includeLibs.tx_div = EXT:div/class.tx_div.php
+
+# Common configuration
+plugin.tx_keforum_mvc6.configuration {
+  pathToTemplateDirectory = EXT:ke_forum/templates/
+  pathToLanguageFile = EXT:ke_forum/locallang.xml
+  entryClassName =
+  ajaxPageType = 110124
+}
+
+
+includeLibs.tx_keforum_controller_moderator = EXT:ke_forum/controllers/class.tx_keforum_controller_moderator.php
+
+plugin.tx_keforum.controller_moderator = USER_INT
+plugin.tx_keforum.controller_moderator < plugin.tx_keforum_mvc6.configuration
+plugin.tx_keforum.controller_moderator {
+  userFunc = tx_keforum_controller_moderator->main
+  defaultAction = list
+}
+
+tt_content.list.20.ke_forum_mvc6 =< plugin.tx_keforum.controller_moderator
+
+
+# INCLUDE CSS
+page.includeCSS.forum = {$tx_keforum.cssFile}
+
+# LOAD CONSTANTS VALUES
+plugin.tx_keforum.controller_moderator.pathToTemplateDirectory = {$tx_keforum.pathToTemplateDirectory}
+plugin.tx_keforum.controller_moderator.pid.categories = {$tx_keforum.pid.categories}
+plugin.tx_keforum.controller_moderator.pid.threads = {$tx_keforum.pid.threads}
+plugin.tx_keforum.controller_moderator.pid.posts = {$tx_keforum.pid.posts}
+plugin.tx_keforum.controller_moderator.pid.profile = {$tx_keforum.pid.profile}
+plugin.tx_keforum.controller_moderator.pid.moderate = {$tx_keforum.pid.moderate}
+plugin.tx_keforum.controller_moderator.pid.storage = {$tx_keforum.pid.storage}
+plugin.tx_keforum.controller_moderator.date.format.default = {$tx_keforum.date.format.default}
+plugin.tx_keforum.controller_moderator.date.format.member = {$tx_keforum.date.format.member}
+plugin.tx_keforum.controller_moderator.mail.sender_name={$tx_keforum.mail.sender_name}
+plugin.tx_keforum.controller_moderator.mail.sender_email={$tx_keforum.mail.sender_email}
+plugin.tx_keforum.controller_moderator.mail.forum_name={$tx_keforum.mail.forum_name}
+plugin.tx_keforum.controller_moderator.mail.footer={$tx_keforum.mail.footer}
+plugin.tx_keforum.controller_moderator.mail.subject.notify_single={$tx_keforum.mail.subject.notify_single}
+plugin.tx_keforum.controller_moderator.mail.subject.notify_cron={$tx_keforum.mail.subject.notify_cron}
+plugin.tx_keforum.controller_moderator.mail.subject.notify_moderator={$tx_keforum.mail.subject.notify_moderator}

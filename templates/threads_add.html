@@ -1,0 +1,54 @@
+<div class="tx-keforum">
+    <div id="keforum-mainContainerCreateThread">
+	<div id="keforum-horizontalSpacer">&nbsp;</div>
+	<div id="keforum-createThreadHeader">
+	    {if !$errorMsg}<p>%%%form.threads.add.headline%%%</p>
+	    {else}<p style="color:red;">{$errorMsg}</p>{/if}
+	</div>
+	
+	<form method="post" action="{$url_form}" enctype="multipart/form-data">
+	    <div class="rowCreateThread1">
+		<div class="cellCreateThread1">%%%form.threads.add.category%%%:</div>                    
+		<div class="cellCreateThread2">{$categories.0.title}</div>
+		<div class="clearer">&nbsp;</div>
+	    </div>
+    
+	    <div class="rowCreateThread2">
+		<div class="cellCreateThread1">%%%form.threads.add.title%%%:</div>
+		<div class="cellCreateThread2">
+		    <input  name="tx_keforum[title]" type="text" size="60" maxlength="255" value="{$parameters.title}">
+		</div>
+		<div class="clearer">&nbsp;</div>
+	    </div>
+	    
+	    <div id="keforum-rowCreateThreadTextarea">
+		<div class="cellCreateThread1">%%%form.threads.add.text%%%:</div>
+		<div class="cellCreateThread2">
+		    <textarea cols="55" rows="10" name="tx_keforum[text]">{$parameters.text}</textarea>
+		</div>
+	    </div>
+	    
+	    {if $attachment.allowed}
+		<div class="rowCreateThread2">
+		    <div class="cellCreateThread1">%%%form.threads.add.attachment%%%:</div>
+		    <div class="cellCreateThread2">
+			{if $errorMsgUpload} <p style="color:red;">{$errorMsgUpload}</p> {/if}
+			<input type="file" name="tx_keforum[attachment]" />
+		    </div>
+		    <div class="clearer">&nbsp;</div>
+		</div>
+	    {/if}
+	    
+	    <div>	
+		<div id="keforum-createThreadButtons">
+		    <div id="keforum-createThreadButtonLeft"></div>
+		    <div id="keforum-createThreadButtonRight">
+			<input type="submit" name="tx_keforum[submit]" value="%%%form.threads.add.submit%%%">
+		    </div>
+		    <div class="clearer">&nbsp;</div>
+		</div>
+	    </div>
+	</form>
+	
+    </div>
+</div>

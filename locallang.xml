@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'ke_forum'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="categories.tableheader.category">Category</label>
+			<label index="categories.tableheader.threads">Threads</label>
+			<label index="categories.tableheader.posts">Posts</label>
+			<label index="categories.tableheader.last_post">Last Post</label>
+
+			<label index="threads.tableheader.threads">Threads</label>
+			<label index="threads.tableheader.replies">Replies</label>
+			<label index="threads.tableheader.author">Author</label>
+			<label index="threads.tableheader.views">Views</label>
+			<label index="threads.tableheader.last_post">Last Post</label>	
+			<label index="threads.back">Back to List of Categories</label>	
+			<label index="threads.saved">Your post has been saved.</label>
+			<label index="threads.moderate">Your post waits for moderation.</label>
+			<label index="threads.new_thread">New Thread</label>
+					
+			<label index="posts.tableheader.author">Author</label>
+			<label index="posts.tableheader.posts">Posts</label>
+			<label index="posts.posts">Posts</label>
+			<label index="posts.member_since.0">Member</label>	
+			<label index="posts.member_since.1">since</label>	
+			<label index="posts.date">Posted on</label>	
+			<label index="posts.back">Back to List of Threads</label>	
+			<label index="posts.signature">Signature</label>
+			<label index="posts.saved">Your post has been saved.</label>
+			<label index="posts.moderate">Your post waits for moderation.</label>
+			<label index="posts.reply">Reply</label>
+			<label index="posts.print">Print Thread</label>
+			<label index="posts.closewindow">Close window</label>
+
+			<label index="moderate.tableheader.accept">Accept</label>
+			<label index="moderate.tableheader.author">Author</label>
+			<label index="moderate.tableheader.posts">Posts</label>
+			<label index="moderate.posts">Posts</label>
+			<label index="moderate.member_since.0">Member</label>	
+			<label index="moderate.member_since.1">since</label>	
+			<label index="moderate.date">Posted on</label>	
+			<label index="moderate.submit">Release</label>
+			<label index="moderate.checkall">Check all</label>
+			<label index="moderate.pm_to">Personal message to</label>
+			
+			<label index="search.tableheader.category">Category</label>
+			<label index="search.tableheader.threads">Threads</label>
+			<label index="search.tableheader.replies">Replies</label>
+			<label index="search.tableheader.author">Author</label>
+			<label index="search.tableheader.views">Views</label>
+			<label index="search.tableheader.last_post">Last Post</label>							
+			<label index="search.back">Back to List of Categories</label>
+			<label index="search.result">result</label>
+			<label index="search.results">results</label>
+			<label index="search.found">found</label>
+
+			<label index="form.posts.add.headline">Add new Post</label>
+			<label index="form.posts.add.title">Title</label>
+			<label index="form.posts.add.text">Text</label>
+			<label index="form.posts.add.thread">Thread</label>
+			<label index="form.posts.add.latest">latest posts</label>
+			<label index="form.posts.add.submit">Submit</label>
+			<label index="form.posts.add.error">Please enter text</label>
+			<label index="form.posts.add.errorUpload1">File size must not be larger than</label>
+			<label index="form.posts.add.errorUpload2">Allowed file types are</label>
+
+			<label index="form.threads.add.headline">Add new Thread</label>							
+			<label index="form.threads.add.title">Title</label>							
+			<label index="form.threads.add.text">Text</label>							
+			<label index="form.threads.add.category">Category</label>							
+			<label index="form.threads.add.submit">Submit</label>							
+			<label index="form.threads.add.error">Please enter title and text</label>
+			<label index="form.threads.add.errorUpload1">File size must not be larger than</label>
+			<label index="form.threads.add.errorUpload2">Allowed file types are</label>
+			<label index="form.threads.add.attachment">Upload File</label>
+			
+			<label index="teaser.headline">New Posts</label>							
+
+			<label index="pagination.first">First</label>							
+			<label index="pagination.last">Last</label>
+			<label index="pagination.page">Page</label>
+			<label index="pagination.of">of</label>
+
+			<label index="breadcrumb.home">Forum</label>							
+			<label index="breadcrumb.threadlist">Threadlist</label>	
+			<label index="breadcrumb.search">Suche</label>							
+			
+			<label index="error.save">Error while saving</label>
+			
+			<label index="back">Back</label>
+			
+			<label index="search.search">Search</label>
+			<label index="search.go">Go</label>
+			
+
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="categories.tableheader.category">Rubrik</label>
+			<label index="categories.tableheader.threads">Themen</label>
+			<label index="categories.tableheader.posts">Beiträge</label>
+			<label index="categories.tableheader.last_post">Letzter Beitrag</label>								
+
+			<label index="threads.tableheader.threads">Themen</label>
+			<label index="threads.tableheader.replies">Antworten</label>
+			<label index="threads.tableheader.author">Autor</label>
+			<label index="threads.tableheader.views">Aufrufe</label>
+			<label index="threads.tableheader.last_post">Letzter Beitrag</label>
+			<label index="threads.back">Zurück zur Rubrikenübersicht</label>	
+			<label index="threads.saved">Ihr Thema wurde gespeichert. Vielen Dank.</label>
+			<label index="threads.moderate">Ihr Thema wurde gespeichert, muss aber noch vom Moderator freigeschaltet werden.</label>
+			<label index="threads.new_thread">Neues Thema</label>
+			
+			<label index="posts.tableheader.author">Autor</label>
+			<label index="posts.tableheader.posts">Beiträge</label>
+			<label index="posts.posts">Beiträge</label>
+			<label index="posts.member_since.0">Angemeldet</label>	
+			<label index="posts.member_since.1">seit</label>	
+			<label index="posts.date">Verfasst am</label>	
+			<label index="posts.back">Zurück zur Themenliste</label>
+			<label index="posts.signature">Signatur</label>
+			<label index="posts.saved">Ihr Beitrag wurde gespeichert. Vielen Dank.</label>
+			<label index="posts.moderate">Ihr Beitrag wurde gespeichert, muss aber noch vom Moderator freigeschaltet werden.</label>
+			<label index="posts.reply">Antworten</label>
+			<label index="posts.print">Thema Drucken</label>
+			<label index="posts.closewindow">Fenster schliessen</label>
+			
+			<label index="moderate.tableheader.accept">Akzeptieren</label>
+			<label index="moderate.tableheader.author">Author</label>
+			<label index="moderate.tableheader.posts">Beiträge</label>
+			<label index="moderate.posts">Beiträge</label>
+			<label index="moderate.member_since.0">Angemeldet</label>	
+			<label index="moderate.member_since.1">seit</label>	
+			<label index="moderate.date">Verfasst am</label>
+			<label index="moderate.submit">Freischalten</label>
+			<label index="moderate.checkall">Alle auswählen</label>
+			<label index="moderate.pm_to">Persönliche Nachricht an</label>
+			
+			<label index="search.tableheader.category">Rubrik</label>
+			<label index="search.tableheader.threads">Themen</label>
+			<label index="search.tableheader.replies">Antworten</label>
+			<label index="search.tableheader.author">Autor</label>
+			<label index="search.tableheader.views">Aufrufe</label>
+			<label index="search.tableheader.last_post">Letzter Beitrag</label>	
+			<label index="search.back">Zurück zur Rubrikenübersicht</label>
+			<label index="search.result">Ergebnis</label>
+			<label index="search.results">Ergebnisse</label>
+			<label index="search.found">gefunden</label>
+			
+			<label index="form.posts.add.headline">Neue Antwort erstellen</label>
+			<label index="form.posts.add.title">Titel</label>
+			<label index="form.posts.add.text">Nachrichtentext</label>
+			<label index="form.posts.add.thread">Thema</label>
+			<label index="form.posts.add.latest">Letzte Beiträge</label>
+			<label index="form.posts.add.submit">Abschicken</label>	
+			<label index="form.posts.add.error">Bitte Text eingeben</label>
+			<label index="form.posts.add.errorUpload1">Die Datei darf nicht größer sein als</label>
+			<label index="form.posts.add.errorUpload2">Erlaubte Typen sind</label>
+			
+
+			<label index="form.threads.add.headline">Neues Thema erstellen</label>
+			<label index="form.threads.add.title">Titel</label>							
+			<label index="form.threads.add.text">Text</label>							
+			<label index="form.threads.add.category">Rubrik</label>							
+			<label index="form.threads.add.submit">Abschicken</label>							
+			<label index="form.threads.add.error">Bitte Titel und Text eingeben</label>
+			<label index="form.threads.add.errorUpload1">Die Datei darf nicht größer sein als</label>
+			<label index="form.threads.add.errorUpload2">Erlaubte Typen sind</label>
+			<label index="form.threads.add.attachment">Dateianhang</label>
+
+			<label index="teaser.headline">Neue Forumsbeiträge</label>							
+
+			<label index="pagination.first">Erste</label>							
+			<label index="pagination.last">Letzte</label>
+			<label index="pagination.page">Seite</label>
+			<label index="pagination.of">von</label>
+
+
+			<label index="breadcrumb.home">Forum</label>							
+			<label index="breadcrumb.threadlist">Themenliste</label>	
+			
+			<label index="error.save">Fehler beim Speichern</label>							
+			
+			<label index="back">Zurück</label>
+			
+			<label index="search.search">Suche</label>
+			<label index="search.go">Los</label>
+			
+		</languageKey>
+	</data>
+</T3locallang>

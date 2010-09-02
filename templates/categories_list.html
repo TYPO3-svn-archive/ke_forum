@@ -1,0 +1,44 @@
+<div class="tx-keforum">
+    
+    <div id="keforum-mainContainerCategoryList">
+        <div id="keforum-subContainerCategoryList">
+            <div id="keforum-categorySearchContainer">
+                <form class="searchFormCategory" action="{$url_search}" method="post" name="tx_indexedsearchform">
+			<input class="searchTextCategoryList" type="text" size="25" value="%%%search.search%%%" name="tx_keforum[searchphrase]" onfocus="this.value='';" />
+			<input class="searchButton" type="submit" value="%%%search.go%%%"/>
+                </form>
+	    </div>
+        </div>
+    </div>
+	
+	<div class="clearer">&nbsp;</div>
+        
+	<div id="keforum-categoryTable">
+	    <table>
+	        <tr>
+		    <th>%%%categories.tableheader.category%%%</th>
+		    <th>%%%categories.tableheader.threads%%%</th>
+		    <th>%%%categories.tableheader.posts%%%</th>
+		    <th>%%%categories.tableheader.last_post%%%</th>
+		</tr>
+		{foreach item=row from=$categories}
+		    <tr class="{cycle values="firstRow,secondRow"}">
+			<td class="firstCell">
+			    <img src="typo3conf/ext/ke_forum/res/img/category_icon.gif">
+			    <div class="themeLink">
+				<a href="{$row.url_category}">{$row.title}</a>
+			    </div>
+			</td>
+			<td class="altCell">{$row.numberOfThreads}</td>
+			<td class="altCell">{$row.numberOfPosts}</td>
+			<td class="lastCell">
+			    <div class="forumDate">
+				<a href="{$row.url_posts}">{$row.lastPost.0.tstamp|date_format:$dateFormat}</a><br />
+				{$row.lastPost.0._author.0.username}
+			    </div>
+			</td>
+		    </tr>
+		{/foreach}
+	    </table>
+        </div>
+    </div>

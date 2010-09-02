@@ -1,0 +1,46 @@
+
+includeLibs.tx_div = EXT:div/class.tx_div.php
+
+# Common configuration
+plugin.tx_keforum_mvc2.configuration {
+  pathToTemplateDirectory = EXT:ke_forum/templates/
+  pathToLanguageFile = EXT:ke_forum/locallang.xml
+  entryClassName =
+  ajaxPageType = 110124
+}
+
+
+includeLibs.tx_keforum_controller_threads = EXT:ke_forum/controllers/class.tx_keforum_controller_threads.php
+
+plugin.tx_keforum.controller_threads = USER
+plugin.tx_keforum.controller_threads < plugin.tx_keforum_mvc2.configuration
+plugin.tx_keforum.controller_threads {
+  userFunc = tx_keforum_controller_threads->main
+  defaultAction = list
+}
+
+tt_content.list.20.ke_forum_mvc2 =< plugin.tx_keforum.controller_threads
+
+
+# INCLUDE CSS
+page.includeCSS.forum = {$tx_keforum.cssFile}
+
+# LOAD CONSTANTS VALUES
+plugin.tx_keforum.controller_threads.pathToTemplateDirectory = {$tx_keforum.pathToTemplateDirectory}
+plugin.tx_keforum.controller_threads.pid.categories = {$tx_keforum.pid.categories}
+plugin.tx_keforum.controller_threads.pid.threads = {$tx_keforum.pid.threads}
+plugin.tx_keforum.controller_threads.pid.threads_add = {$tx_keforum.pid.threads_add}
+plugin.tx_keforum.controller_threads.pid.posts = {$tx_keforum.pid.posts}
+plugin.tx_keforum.controller_threads.pid.search = {$tx_keforum.pid.search}
+plugin.tx_keforum.controller_threads.pid.storage = {$tx_keforum.pid.storage}
+plugin.tx_keforum.controller_threads.date.format.default = {$tx_keforum.date.format.default}
+plugin.tx_keforum.controller_threads.pagination.itemsPerPage = {$tx_keforum.pagination.itemsPerPage}
+plugin.tx_keforum.controller_threads.pagination.itemsInBrowser = {$tx_keforum.pagination.itemsInBrowser}
+plugin.tx_keforum.controller_threads.orderBy= crdate DESC
+plugin.tx_keforum.controller_threads.mail.sender_name={$tx_keforum.mail.sender_name}
+plugin.tx_keforum.controller_threads.mail.sender_email={$tx_keforum.mail.sender_email}
+plugin.tx_keforum.controller_threads.mail.forum_name={$tx_keforum.mail.forum_name}
+plugin.tx_keforum.controller_threads.mail.footer={$tx_keforum.mail.footer}
+plugin.tx_keforum.controller_threads.mail.subject.notify_single={$tx_keforum.mail.subject.notify_single}
+plugin.tx_keforum.controller_threads.mail.subject.notify_cron={$tx_keforum.mail.subject.notify_cron}
+plugin.tx_keforum.controller_threads.mail.subject.notify_moderator={$tx_keforum.mail.subject.notify_moderator}

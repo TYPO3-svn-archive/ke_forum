@@ -1,0 +1,25 @@
+<div class="tx-keforum">
+   <div id="keforum-mainContainerTeaser">
+      <div id="teaserTableContainer">
+	 <div id="teaserTableHeader">
+	    <div id="teaserTableHeaderImage">
+	       <img src="typo3conf/ext/ke_forum/res/img/forum_teaser_icon_bright.gif" />
+	    </div>
+	    <div id="teaserTableHeaderText">
+	       <h3>%%%teaser.headline%%%</h3>
+	    </div>
+	 </div>
+	 <div class="clearer">&nbsp;</div>
+	 {foreach item=row from=$posts}	
+	    <div id="teaserTextContainer">
+	       <a href="{$row.url_post}">{$row.content}</a><br />
+	       {$row._category.title}<br />
+	       {$row.tstamp|date_format:$dateFormat} <span class="bold"><!--<a href="mailto:{$row._author.0.email}" class="teaserTextContainerLink">-->{$row._author.0.username}<!--</a>--></span>
+	    </div>
+	    {if !$row.last}
+	       <img class="hrLine" src="typo3conf/ext/ke_forum/res/img/horizontal_line.gif" />
+	    {/if}
+	 {/foreach}
+      </div>
+   </div>
+</div>

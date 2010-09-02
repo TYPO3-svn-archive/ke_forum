@@ -1,0 +1,38 @@
+
+includeLibs.tx_div = EXT:div/class.tx_div.php
+
+# Common configuration
+plugin.tx_keforum_mvc9.configuration {
+  pathToTemplateDirectory = EXT:ke_forum/templates/
+  pathToLanguageFile = EXT:ke_forum/locallang.xml
+  entryClassName =
+  ajaxPageType = 110124
+}
+
+
+includeLibs.tx_keforum_controller_add_post = EXT:ke_forum/controllers/class.tx_keforum_controller_add_thread.php
+
+plugin.tx_keforum.controller_add_thread = USER_INT
+plugin.tx_keforum.controller_add_thread < plugin.tx_keforum_mvc9.configuration
+plugin.tx_keforum.controller_add_thread {
+  userFunc = tx_keforum_controller_add_thread->main
+  defaultAction = add
+}
+
+tt_content.list.20.ke_forum_mvc9 =< plugin.tx_keforum.controller_add_thread
+
+
+# INCLUDE CSS
+page.includeCSS.forum = {$tx_keforum.cssFile}
+
+# LOAD CONSTANTS VALUES
+plugin.tx_keforum.controller_add_thread.pathToTemplateDirectory = {$tx_keforum.pathToTemplateDirectory}
+plugin.tx_keforum.controller_add_thread.pid.threads = {$tx_keforum.pid.threads}
+plugin.tx_keforum.controller_add_thread.pid.threads_add = {$tx_keforum.pid.threads_add}
+plugin.tx_keforum.controller_add_thread.pid.posts = {$tx_keforum.pid.posts}
+plugin.tx_keforum.controller_add_thread.pid.categories = {$tx_keforum.pid.categories}
+plugin.tx_keforum.controller_add_thread.allowUpload = {$tx_keforum.upload.allowInNewThread}
+
+plugin.tx_keforum.controller_add_thread.attachment.allowed = {$tx_keforum.attachment.allowInNewThread}
+plugin.tx_keforum.controller_add_thread.attachment.maxFileSize = {$tx_keforum.attachment.maxFileSize}
+plugin.tx_keforum.controller_add_thread.attachment.allowedTypes = {$tx_keforum.attachment.allowedTypes}

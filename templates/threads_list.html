@@ -1,0 +1,117 @@
+<div class="tx-keforum">
+    <!-- ###THREAD_LIST### start -->
+    <div id=keforum-threadListMainContainer">
+	<div id="keforum-threadListSubContainer">
+	    <div id="keforum-breadcrumb">
+		<a href="{$url_categories}">%%%breadcrumb.home%%%</a> >
+		{$category.0.title}
+	    </div>
+	    <div class="clearer">&nbsp;</div>
+		<div id="keforum-headerThreadListContainer">
+		    <div id="keforum-headerThreadListSubContainer">
+			<div id="keforum-threadListHeaderLinkContainer">
+			    <div id="keforum-threadListHeaderLink">
+				<a href="{$url_categories}" class="backButton">%%%threads.back%%%</a>
+			    </div>
+			</div>
+			<div id="keforum-searchFormThreadList">
+			    <form action="{$url_search}" method="post" name="tx_indexedsearchform">
+				<input class="searchTextThreadList" type="text" size="25" value="%%%search.search%%%" name="tx_keforum[searchphrase]" onfocus="this.value='';" />
+				<input class="searchButton" type="submit" value="%%%search.go%%% "/>
+			    </form>                                                                                    
+			</div>
+		    </div>
+		<div class="clearer">&nbsp;</div>
+	    </div>
+	    
+	    {if $flag=="insert"}
+		<div id="action-response">%%%threads.saved%%%</div>
+	    {/if}
+	    {if $flag=="moderate"}
+		<div id="action-response">%%%threads.moderate%%%</div>
+	    {/if}
+	    
+	    {if $threads}
+	    <div id="keforum-table-container">
+		<table>
+		    <thead>
+			<tr>
+			    <th>%%%threads.tableheader.threads%%%</th>
+			    <th>%%%threads.tableheader.replies%%%</th>
+			    <th>%%%threads.tableheader.author%%%</th>
+			    <th>%%%threads.tableheader.views%%%</th>
+			    <th>%%%threads.tableheader.last_post%%%</th>
+			</tr>
+		    </thead>
+		    <tbody>
+			{foreach item=row from=$threads}
+			    <tr class="{cycle values="firstRow,secondRow" name="class"}">
+				<td class="firstCell">
+				    <img src="typo3conf/ext/ke_forum/res/img/forum_themen_icon_{cycle values="bright,dark" name="icon"}.gif">
+				    <div class="themeLink"><a href="{$row.url_posts}">{$row.title}</a></div>
+				</td>
+				<td class="altCell">{$row.numberOfPosts}</td>
+				<td><!--<a href="mailto:{$row._author.0.email}">-->{$row._author.0.username}<!--</a>--></td>
+				<td class="altCell">{$row.views}</td>
+				<td class="lastCell">
+				    <div class="forumDate"><a href="{$row.url_last_post}">{$row.lastPost.0.tstamp|date_format:$dateFormat}</a><br/>
+					{$row.lastPost.0._author.0.username}
+				    </div>
+				</td>
+			    </tr>
+			{/foreach}
+		    </tbody>
+		</table>
+		<table id="keforum-footer" cellspacing="0">
+		    <tr>
+			<td id="newThemeButtonCell">
+			    {if $writeAccess}
+				<div id="newThemeButtonContainer">
+				    <input class="newThemeButton" type="button" value="%%%threads.new_thread%%%" onClick="window.location.href='{$url_add}'" />
+				</div>
+			    {/if}
+			 </td>
+			
+			<td id="pagebrowserContainer">
+			    
+			    <div>
+				<span class="pagebrowserOverview">%%%pagination.page%%% {$pages.current.number} %%%pagination.of%%% {$pages.count}</span>
+				    {if $pages.current.number!=1}
+					<a href="{$pages.first.link}">&lt;&lt; %%%pagination.first%%%</a>
+				    {/if}				
+				    {if $pages.current.number!=1}
+					<a href="{$pages.previous.link}">&lt;</a>
+				    {/if}		
+				    {foreach item=row from=$pages.list}
+					<a href="{$row.link}">{$row.number}</a>
+				    {/foreach}
+				    {if $pages.current.number!=$pages.count}
+					<a href="{$pages.next.link}">&gt;</a>
+				    {/if}
+				    {if $pages.current.number!=$pages.count}
+					<a href="{$pages.last.link}">%%%pagination.last%%% &gt;&gt;</a>
+				    {/if}
+			    </div>
+			</td>
+		    </tr>
+		 </table>
+	    </div>
+	    {else}
+	    <div id="keforum-table-container">
+		<table id="keforum-footer" cellspacing="0">
+		    <tr>
+			<td id="newThemeButtonCell">
+			    {if $writeAccess}
+			    <div id="newThemeButtonContainer">
+				<input class="newThemeButton" type="button" value="%%%threads.new_thread%%%" onClick="window.location.href='{$url_add}'">
+			    </div>
+			    {/if}
+			 </td>
+		     </tr>
+		</table>
+	    </div>			
+	    {/if}
+	</div>
+    </div>
+    <!-- ###THREAD_LIST### end -->
+</div>

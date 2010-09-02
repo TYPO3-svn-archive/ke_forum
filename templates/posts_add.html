@@ -1,0 +1,69 @@
+<div class="tx-keforum">
+    <div id="keforum-mainContainerCreateThread">
+	<div id="keforum-horizontalSpacer">&nbsp;</div>
+	<div id="keforum-createThreadHeader">
+	    {if !$errorMsg}
+		<p>%%%form.posts.add.headline%%%</p>
+	    {else}
+		<p style="color:red;">{$errorMsg}</p>
+	    {/if}
+	</div>
+	
+	<form method="post" action="{$url_form}" enctype="multipart/form-data">
+    
+	    <div class="rowCreateThread1">
+		<div class="cellCreateThread1">%%%form.posts.add.title%%%:</div>                    
+		<div class="cellCreateThread2">{$threads.0.title}</div>
+		<div class="clearer">&nbsp;</div>
+	    </div>
+	    
+	    {if $showLatestPosts}
+		<div class="rowCreateThread1">
+		    <div class="cellCreateThread1">%%%form.posts.add.latest%%%:</div>
+		    <div class="cellCreateThread2  lastPost">
+			{foreach item=row from=$threads.0.lastPost key=i}
+			    <div class="latest-post">
+				<b>{$row.tstamp|date_format:$dateFormat}, {$row._author.0.username}</b><br />
+				{$row.content|nl2br}
+			    </div>
+			{/foreach}
+		    </div>
+		    <div class="clearer">&nbsp;</div>
+		</div>
+	    {/if}
+	    
+	    <div id="keforum-rowCreateThreadTextarea">
+		<div class="cellCreateThread1">%%%form.posts.add.text%%%:</div>
+		<div class="cellCreateThread2">
+		    <textarea cols="55" rows="10" name="tx_keforum[text]">{$parameters.text}</textarea>
+		</div>
+		<div class="clearer">&nbsp;</div>
+	    </div>
+	    
+	    {if $attachment.allowed} 
+		<div class="rowCreateThread1">
+		    <div class="cellCreateThread1">%%%form.threads.add.attachment%%%:</div>
+		    <div class="cellCreateThread2">
+			{if $errorMsgUpload} <p style="color:red;">{$errorMsgUpload}</p> {/if}
+			<input type="file" name="tx_keforum[attachment]">
+		    </div>
+		    <div class="clearer">&nbsp;</div>
+		</div>
+	    {/if}
+		
+		
+	    <div>
+		<div id="keforum-createThreadButtons">
+		    <div id="keforum-createThreadButtonLeft"></div>
+		    <div id="keforum-createThreadButtonRight">
+			<input type="submit" name="tx_keforum[submit]" value="%%%form.posts.add.submit%%%">
+		    </div>
+		    <div class="clearer">&nbsp;</div>
+		</div>
+	    </div>
+	    
+	    
+	</form>
+    </div>
+</div>
+<br />

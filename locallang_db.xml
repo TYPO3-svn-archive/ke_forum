@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'ke_forum'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_keforum_categories">Categories</label>
+			<label index="tx_keforum_categories.title">Title</label>
+			<label index="tx_keforum_categories.public">Public?</label>
+			<label index="tx_keforum_categories.write_access">Write access</label>
+			<label index="tx_keforum_categories.read_access">Read access</label>
+			<label index="tx_keforum_categories.moderated">moderated?</label>
+			<label index="tx_keforum_categories.moderators">Moderators</label>
+			<label index="tx_keforum_threads">Threads</label>
+			<label index="tx_keforum_threads.title">Title</label>
+			<label index="tx_keforum_threads.category">Category</label>
+			<label index="tx_keforum_threads.author">Author</label>
+			<label index="tx_keforum_threads.views">Views</label>
+			<label index="tx_keforum_posts">Posts</label>
+			<label index="tx_keforum_posts.title">Title</label>
+			<label index="tx_keforum_posts.content">Content</label>
+			<label index="tx_keforum_posts.author">Author</label>
+			<label index="tx_keforum_posts.thread">Thread</label>
+			<label index="tx_keforum_posts.parent">Parent post</label>
+			<label index="tx_keforum_posts.attachment">File Attachment</label>
+			<label index="fe_users.tx_keforum_notification_answer">Notify me about answers to my posts?</label>
+			<label index="fe_users.tx_keforum_daily_report">Daily Report about new posts?</label>
+			<label index="fe_users.tx_keforum_signature">Forum signature</label>
+			<label index="tt_content.list_type_pi1">Forum: Categories</label>
+			<label index="tt_content.list_type_pi2">Forum: Threads</label>
+			<label index="tt_content.list_type_pi3">Forum: Posts</label>
+			<label index="tt_content.list_type_pi4">Forum: Search</label>
+			<label index="tt_content.list_type_pi5">Forum: Teaser</label>
+			<label index="tt_content.list_type_pi6">Forum: Moderation</label>
+			<label index="tt_content.list_type_pi7">Forum: Cron</label>
+			<label index="tt_content.list_type_pi8">Forum: Add Post</label>
+			<label index="tt_content.list_type_pi9">Forum: Add Thread</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="tx_keforum_categories">Rubriken</label>
+			<label index="tx_keforum_categories.title">Titel</label>
+			<label index="tx_keforum_categories.public">Öffentlich?</label>
+			<label index="tx_keforum_categories.write_access">Schreibzugriff</label>
+			<label index="tx_keforum_categories.read_access">Lesezugriff</label>
+			<label index="tx_keforum_categories.moderated">moderiert?</label>
+			<label index="tx_keforum_categories.moderators">Moderatoren</label>
+			<label index="tx_keforum_threads">Themen</label>
+			<label index="tx_keforum_threads.title">Titel</label>
+			<label index="tx_keforum_threads.category">Rubrik</label>
+			<label index="tx_keforum_threads.author">Autor</label>
+			<label index="tx_keforum_threads.views">Aufrufe</label>
+			<label index="tx_keforum_posts">Beiträge</label>
+			<label index="tx_keforum_posts.title">Titel</label>
+			<label index="tx_keforum_posts.content">Inhalt</label>
+			<label index="tx_keforum_posts.author">Autor</label>
+			<label index="tx_keforum_posts.thread">Thema</label>
+			<label index="tx_keforum_posts.parent">Übergeordneter Beitrag</label>
+			<label index="tx_keforum_posts.attachment">Dateianhang</label>
+			<label index="fe_users.tx_keforum_notification_answer">Benachrichtigung bei Antworten auf meine Beiträge?</label>
+			<label index="fe_users.tx_keforum_daily_report">Tägliche Zusammenfassung neuer Beiträge?</label>
+			<label index="fe_users.tx_keforum_signature">Forums-Signatur</label>
+			<label index="tt_content.list_type_pi1">Forum: Kategorienübersicht</label>
+			<label index="tt_content.list_type_pi2">Forum: Themenübersicht</label>
+			<label index="tt_content.list_type_pi3">Forum: Beitragsansicht</label>
+			<label index="tt_content.list_type_pi4">Forum: Suche</label>
+			<label index="tt_content.list_type_pi5">Forum: Teaser</label>
+			<label index="tt_content.list_type_pi6">Fourm: Moderation</label>
+			<label index="tt_content.list_type_pi7">Forum: Cronjob</label>
+			<label index="tt_content.list_type_pi8">Forum: Beitrag hinzufügen</label>
+			<label index="tt_content.list_type_pi9">Forum: Thema hinzufügen</label>
+		</languageKey>
+	</data>
+</T3locallang>

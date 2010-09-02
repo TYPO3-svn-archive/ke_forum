@@ -1,0 +1,37 @@
+
+includeLibs.tx_div = EXT:div/class.tx_div.php
+
+# Common configuration
+plugin.tx_keforum_mvc1.configuration {
+  pathToTemplateDirectory = EXT:ke_forum/templates/
+  pathToLanguageFile = EXT:ke_forum/locallang.xml
+  entryClassName =
+  ajaxPageType = 110124
+}
+
+
+includeLibs.tx_keforum_controller_categories = EXT:ke_forum/controllers/class.tx_keforum_controller_categories.php
+
+plugin.tx_keforum.controller_categories = USER
+plugin.tx_keforum.controller_categories < plugin.tx_keforum_mvc1.configuration
+plugin.tx_keforum.controller_categories {
+  userFunc = tx_keforum_controller_categories->main
+  defaultAction = list
+}
+
+tt_content.list.20.ke_forum_mvc1 =< plugin.tx_keforum.controller_categories
+
+
+
+
+# INCLUDE CSS
+page.includeCSS.forum = {$tx_keforum.cssFile}
+
+# LOAD CONSTANTS VALUES
+plugin.tx_keforum.controller_categories.pathToTemplateDirectory = {$tx_keforum.pathToTemplateDirectory}
+plugin.tx_keforum.controller_categories.pid.categories = {$tx_keforum.pid.categories}
+plugin.tx_keforum.controller_categories.pid.threads = {$tx_keforum.pid.threads}
+plugin.tx_keforum.controller_categories.pid.posts = {$tx_keforum.pid.posts}
+plugin.tx_keforum.controller_categories.pid.search = {$tx_keforum.pid.search}
+plugin.tx_keforum.controller_categories.pid.storage = {$tx_keforum.pid.storage}
+plugin.tx_keforum.controller_categories.date.format.default = {$tx_keforum.date.format.default}

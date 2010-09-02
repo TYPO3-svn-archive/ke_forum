@@ -1,0 +1,117 @@
+
+<div class="tx-keforum">
+    <div id="keforum-mainContainerSingleThread">
+	<div id="keforum-breadcrumb">
+	    <a href="{$url_categories}">%%%breadcrumb.home%%%</a> >
+	    <a href="{$url_threads}">{$threads.0._category.0.title}</a> >
+	    {$threads.0.title}
+        </div>
+        <div class="clearer">&nbsp;</div>
+    
+        <div id="keforum-mainSubContainerSingleThread">
+	    <div id="keforum-titleSingelThread"><h2>{$threads.0.title}</h2></div>
+            <div id="keforum-headerSingleThread">
+		<div id="keforum-headerSingleThreadLink"><a href="{$url_threads}">%%%posts.back%%%</a></div>
+		<div class="clearer">&nbsp;</div>
+	    </div>
+	    
+	    {if $ukb}
+		{$ukb_content}
+		{$ukb_form}
+	    {/if}
+	    
+	    {if $flag=="insert"}<div id="action-response">%%%posts.saved%%%</div>{/if}
+	    {if $flag=="moderate"}<div id="action-response">%%%posts.moderate%%%</div>{/if}		
+	    {if $posts}
+		<div id="tableContainerSingleThread">
+		    <table>
+			<thead>
+			    <tr>
+				<th>%%%posts.tableheader.author%%%</th>
+				<th>%%%posts.tableheader.posts%%%</th>
+			    </tr>
+			</thead>
+			<tbody>
+			
+			    {foreach item=row from=$posts}
+				<tr class="{cycle values="firstRow,secondRow"}">
+				    <td class="firstCell">
+					<div class="singleThreadContainer">
+					    <a name="post_{$row.uid}"/>
+					    <img src="typo3conf/ext/ke_forum/res/img/forum_singleThread_icon.gif"/>
+					    <div class="singleThreadAuthor"> 
+						<!--<a href="mailto:{$row._author.0.email}">-->{$row._author.0.username}<!--</a>--><br />
+						<span class="bold">%%%posts.member_since.0%%%</span> %%%posts.member_since.1%%%  {$row._author.0.crdate|date_format:$dateFormatMember}<br />
+						<span class="bold">%%%posts.posts%%%:</span> {$row._author.0.numberOfPosts}<br />
+						<!-- <a href="#" class="singleThreadPMLink">Pers&ouml;nliche Nachricht an {$row._author.0.username}</a> -->
+					    </div>
+					</div>
+				    </td>
+				    <td class="singleThreadPost">
+					<div class="singleThreadPostContainer">
+					    <p class="forumDateSingleThread">
+						<span class="bold">%%%posts.date%%%:</span> {$row.tstamp|date_format:$dateFormat}
+					    </p>
+					    <hr class="postDate" />
+					    <p class="post" >{$row.content|nl2br}</p>
+					    
+					    {if $row.attachment}
+						<div class="attachment">
+						    <b>Dateianhang:</b><br />
+						    <a href="uploads/tx_keforum/{$row.attachment}" target="_blank">
+							<img src="typo3conf/ext/ke_forum/res/img/attach.gif" border="0"></img>
+							{$row.attachment}
+						    </a>
+						</div>
+					    {/if}
+					    
+					    {if $row._author.0.tx_keforum_signature}
+						<hr class="signature" /> 
+						{$row._author.0.tx_keforum_signature|nl2br}
+					    {/if}
+					</div>
+				    </td>
+				</tr>
+			    {/foreach}
+			</tbody>
+		    </table>
+		    <table id="keforum-footerSingleThread" cellspacing="0">
+			<tr>
+			    <td id="newThemeButtonCell">
+				{if $writeAccess}
+				    <div id="newThemeButtonContainer">
+					<input class="newThemeButton" type="button" value="%%%posts.reply%%%" onClick="window.location.href='{$url_add}'" />
+				    </div>
+				{/if}
+			    </td>
+			    <td id="printButtonCell">
+				<div class="printButton">{$popup_print}</div>
+			    </td>
+			    <td id="pagebrowserContainer">
+				<div>
+				<span class="pagebrowserOverview">%%%pagination.page%%% {$pages.current.number} %%%pagination.of%%% {$pages.count}</span>
+			        {if $pages.current.number!=1}
+				<a href="{$pages.first.link}">&lt;&lt; %%%pagination.first%%%</a>
+				{/if}				
+				{if $pages.current.number!=1}
+				<a href="{$pages.previous.link}">&lt;</a>
+				{/if}		
+				{foreach item=row from=$pages.list}
+				<a href="{$row.link}">{$row.number}</a>
+				{/foreach}
+				{if $pages.current.number!=$pages.count}
+				<a href="{$pages.next.link}">&gt;</a>
+				{/if}
+				{if $pages.current.number!=$pages.count}
+				<a href="{$pages.last.link}">%%%pagination.last%%% &gt;&gt;</a>
+				{/if}
+				</div>
+			    </td>
+			</tr>
+		    </table>
+		</div>
+	    {/if}
+	</div>
+	
+    </div>
+</div>
