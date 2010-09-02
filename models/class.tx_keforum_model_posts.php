@@ -200,9 +200,10 @@ class tx_keforum_model_posts extends tx_lib_object {
 		$parametersThreads=new tx_lib_parameters($this->controller);
 		$parametersThreads->set("uid",$parameters["thread"]);			
 		$modelThreads->load($parametersThreads);
-		
 		$thread = $modelThreads->get("threads");
-		$thread[0]['lastPost'] = array_reverse($thread[0]['lastPost'],1);
+		if (is_array($thread[0]['lastPost'])) {
+			$thread[0]['lastPost'] = array_reverse($thread[0]['lastPost'],1);
+		}
 		$this->set("threads",$thread);
 	}
 	
