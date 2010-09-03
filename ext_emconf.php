@@ -12,7 +12,7 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'Forum',
-	'description' => '',
+	'description' => 'Forum software with basic functions',
 	'category' => 'plugin',
 	'author' => 'Andreas Kiefer (kennziffer.com)',
 	'author_email' => 'kiefer@kennziffer.com',
@@ -29,7 +29,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'clearCacheOnLoad' => 0,
 	'lockType' => '',
 	'author_company' => 'www.kennziffer.com GmbH',
-	'version' => '0.0.0',
+	'version' => '0.0.1',
 	'constraints' => array(
 		'depends' => array(
 			'cms' => '',
