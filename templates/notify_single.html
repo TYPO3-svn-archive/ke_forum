@@ -1,36 +1,17 @@
 <html>
     <head></head>
     <body>
-
 	Hallo {$recipient_name},<br /><br />
-	hier im {$forumname} wurde auf einen Ihrer BeitrÃ¤ge geantwortet. <br /><br />
-	
-	<table>
-	    <tr>
-		<td><b>Rubrik:</b></td>
-		<td>{$category.title}</td>
-	    </tr>
-	    <tr>
-		<td><b>Thema:</b></td>
-		<td>{$thread.title}</td>
-	    </tr>
-	    <tr>
-		<td><b>Benutzer:</b></td>
-		<td>{$username}</td>
-	    </tr>
-	    <tr>
-		<td><b>Datum:</b></td>
-		<td>{$post.tstamp|date_format:$dateFormat}</td>
-	    </tr>
-	</table>
-	<br />
+	hier im {$forumname} wurde auf einen Ihrer Beitr&auml;ge geantwortet. <br /><br />
+	<b>Rubrik:</b> {$category.title} <br  />
+	<b>Thema:</b>{$thread.title}<br />
+	<b>Benutzer:</b> {$username}<br />
+	<b>Datum:</b>{$post.tstamp|date_format:$dateFormat}<br /><br />
 	<b>Beitrag:</b><br />
 	{$text}<br /><br />
-	<a href="{$linkPost}">zum Beitrag</a><br />
-	<p>Sie erhalten diese E-Mail, weil Sie im {$forumname} die Benachrichtigung Antworten auf eigene BeitrÃ¤ge aktiviert haben. </p>
-	<p>Ihre persÃ¶nlichen Einstellungen kÃ¶nnen Sie <a href=" {$linkProfile}">hier</a> Ã¤ndern.</p>
-	<br /><br />
-	<p>{$footer}</p>
-
+	<a href="{$linkPost}">zum Beitrag</a><br /><br />
+	Sie erhalten diese E-Mail, weil Sie im {$forumname} die Benachrichtigung bei Antworten auf eigene Beitr&auml;ge aktiviert haben. <br />
+	<p>Ihre persönlichen Einstellungen können Sie <a href=" {$linkProfile}">hier</a> ändern.</p>
+	{$footer}
     </body>
 </html>

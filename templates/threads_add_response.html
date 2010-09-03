@@ -3,10 +3,16 @@
     <div id=keforum-threadListMainContainer">
 	<div id="keforum-threadListSubContainer">
 	    <br />
-	    {if $flag=="insert"} <div id="action-response">%%%threads.saved%%%</div>{/if}
-	    {if $flag=="moderate"} <div id="action-response">%%%threads.moderate%%%</div> {/if}
+	    
+	    {if $flag=="insert"}
+		<div id="action-response">%%%threads.saved%%%</div>
+	    {/if}
+	    {if $flag=="moderate"}
+		<div id="action-response">%%%threads.moderate%%%</div>
+	    {/if}
 	    <br /><br />
 	    <a href="{$url_threads}" class="backButton">%%%back%%%</a>
+	    
 	</div>
     </div>
     <!-- ###THREAD_LIST### end -->
