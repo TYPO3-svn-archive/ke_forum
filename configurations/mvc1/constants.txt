@@ -36,7 +36,7 @@ tx_keforum {
 	# cat=tx_keforum//220 type=text; label= Short date format: The format string for short dates; see http://de3.php.net/manual/de/function.strftime.php for documentation
 	date.format.short=%e.%m %Y, %H:%M
 	# cat=tx_keforum//230 type=text; label= Member date format: The format string for "member since"; see http://de3.php.net/manual/de/function.strftime.php for documentation
-	date.format.member=%d. %B.%Y
+	date.format.member=%d. %B %Y
 	# cat=tx_keforum//240 type=text; label= Teaser date format: The format string for dates in teaser view; see http://de3.php.net/manual/de/function.strftime.php for documentation
 	date.format.teaser=%d.%m.%Y
 	

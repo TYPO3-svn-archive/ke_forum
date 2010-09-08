@@ -29,7 +29,6 @@
 
 
 
-
 /**
  * Class that implements the controller "threads" for tx_keforum.
  *

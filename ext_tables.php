@@ -92,64 +92,43 @@ t3lib_extMgm::addToAllTCAtypes('fe_users','--div--;Forum,tx_keforum_notification
 # CATEGORIES
 t3lib_div::loadTCA('tt_content');
 $TCA['tt_content']['types']['list']['subtypes_excludelist'][$_EXTKEY.'_mvc1']='layout,select_key,pages,recursive';
-$TCA['tt_content']['types']['list']['subtypes_addlist'][$_EXTKEY.'_mvc1']='pi_flexform';
 t3lib_extMgm::addStaticFile('ke_forum', './configurations/mvc1', 'Forum: Categories');
-t3lib_extMgm::addPiFlexFormValue($_EXTKEY.'_mvc1', 'FILE:EXT:ke_forum/configurations/mvc1/flexform.xml');
 t3lib_extMgm::addPlugin(array('LLL:EXT:ke_forum/locallang_db.xml:tt_content.list_type_pi1', $_EXTKEY.'_mvc1'),'list_type');
 
 # THREADS
 t3lib_div::loadTCA('tt_content');
 $TCA['tt_content']['types']['list']['subtypes_excludelist'][$_EXTKEY.'_mvc2']='layout,select_key,pages,recursive';
-$TCA['tt_content']['types']['list']['subtypes_addlist'][$_EXTKEY.'_mvc2']='pi_flexform';
 t3lib_extMgm::addStaticFile('ke_forum', './configurations/mvc2', 'Forum: Threads');
-t3lib_extMgm::addPiFlexFormValue($_EXTKEY.'_mvc2', 'FILE:EXT:ke_forum/configurations/mvc2/flexform.xml');
 t3lib_extMgm::addPlugin(array('LLL:EXT:ke_forum/locallang_db.xml:tt_content.list_type_pi2', $_EXTKEY.'_mvc2'),'list_type');
 
 # POSTS
 t3lib_div::loadTCA('tt_content');
 $TCA['tt_content']['types']['list']['subtypes_excludelist'][$_EXTKEY.'_mvc3']='layout,select_key,pages,recursive';
-$TCA['tt_content']['types']['list']['subtypes_addlist'][$_EXTKEY.'_mvc3']='pi_flexform';
 t3lib_extMgm::addStaticFile('ke_forum', './configurations/mvc3', 'Forum: Posts');
-t3lib_extMgm::addPiFlexFormValue($_EXTKEY.'_mvc3', 'FILE:EXT:ke_forum/configurations/mvc3/flexform.xml');
 t3lib_extMgm::addPlugin(array('LLL:EXT:ke_forum/locallang_db.xml:tt_content.list_type_pi3', $_EXTKEY.'_mvc3'),'list_type');
 
 # SEARCH
 t3lib_div::loadTCA('tt_content');
 $TCA['tt_content']['types']['list']['subtypes_excludelist'][$_EXTKEY.'_mvc4']='layout,select_key,pages,recursive';
-$TCA['tt_content']['types']['list']['subtypes_addlist'][$_EXTKEY.'_mvc4']='pi_flexform';
 t3lib_extMgm::addStaticFile('ke_forum', './configurations/mvc4', 'Forum: Search');
-t3lib_extMgm::addPiFlexFormValue($_EXTKEY.'_mvc4', 'FILE:EXT:ke_forum/configurations/mvc4/flexform.xml');
 t3lib_extMgm::addPlugin(array('LLL:EXT:ke_forum/locallang_db.xml:tt_content.list_type_pi4', $_EXTKEY.'_mvc4'),'list_type');
 
 # TEASER
 t3lib_div::loadTCA('tt_content');
 $TCA['tt_content']['types']['list']['subtypes_excludelist'][$_EXTKEY.'_mvc5']='layout,select_key,pages,recursive';
-$TCA['tt_content']['types']['list']['subtypes_addlist'][$_EXTKEY.'_mvc5']='pi_flexform';
 t3lib_extMgm::addStaticFile('ke_forum', './configurations/mvc5', 'Forum: Teaser');
-t3lib_extMgm::addPiFlexFormValue($_EXTKEY.'_mvc5', 'FILE:EXT:ke_forum/configurations/mvc5/flexform.xml');
 t3lib_extMgm::addPlugin(array('LLL:EXT:ke_forum/locallang_db.xml:tt_content.list_type_pi5', $_EXTKEY.'_mvc5'),'list_type');
 
 # MODERATION
 t3lib_div::loadTCA('tt_content');
 $TCA['tt_content']['types']['list']['subtypes_excludelist'][$_EXTKEY.'_mvc6']='layout,select_key,pages,recursive';
-$TCA['tt_content']['types']['list']['subtypes_addlist'][$_EXTKEY.'_mvc6']='pi_flexform';
 t3lib_extMgm::addStaticFile('ke_forum', './configurations/mvc6', 'Forum: Moderation');
-t3lib_extMgm::addPiFlexFormValue($_EXTKEY.'_mvc6', 'FILE:EXT:ke_forum/configurations/mvc6/flexform.xml');
 t3lib_extMgm::addPlugin(array('LLL:EXT:ke_forum/locallang_db.xml:tt_content.list_type_pi6', $_EXTKEY.'_mvc6'),'list_type');
-
-# CRON NOTIFICATION
-t3lib_div::loadTCA('tt_content');
-$TCA['tt_content']['types']['list']['subtypes_excludelist'][$_EXTKEY.'_mvc7']='layout,select_key,pages,recursive';
-$TCA['tt_content']['types']['list']['subtypes_addlist'][$_EXTKEY.'_mvc7']='pi_flexform';
-t3lib_extMgm::addStaticFile('ke_forum', './configurations/mvc7', 'Forum: Cronjob');
-t3lib_extMgm::addPiFlexFormValue($_EXTKEY.'_mvc7', 'FILE:EXT:ke_forum/configurations/mvc7/flexform.xml');
-t3lib_extMgm::addPlugin(array('LLL:EXT:ke_forum/locallang_db.xml:tt_content.list_type_pi7', $_EXTKEY.'_mvc7'),'list_type');
 
 # ADD POST
 t3lib_div::loadTCA('tt_content');
 $TCA['tt_content']['types']['list']['subtypes_excludelist'][$_EXTKEY.'_mvc8']='layout,select_key,pages,recursive';
 t3lib_extMgm::addStaticFile('ke_forum', './configurations/mvc8', 'Forum: Add Post');
-t3lib_extMgm::addPiFlexFormValue($_EXTKEY.'_mvc8', 'FILE:EXT:ke_forum/configurations/mvc8/flexform.xml');
 t3lib_extMgm::addPlugin(array('LLL:EXT:ke_forum/locallang_db.xml:tt_content.list_type_pi8', $_EXTKEY.'_mvc8'),'list_type');
 
 
@@ -157,7 +136,6 @@ t3lib_extMgm::addPlugin(array('LLL:EXT:ke_forum/locallang_db.xml:tt_content.list
 t3lib_div::loadTCA('tt_content');
 $TCA['tt_content']['types']['list']['subtypes_excludelist'][$_EXTKEY.'_mvc9']='layout,select_key,pages,recursive';
 t3lib_extMgm::addStaticFile('ke_forum', './configurations/mvc9', 'Forum: Add Thread');
-t3lib_extMgm::addPiFlexFormValue($_EXTKEY.'_mvc9', 'FILE:EXT:ke_forum/configurations/mvc9/flexform.xml');
 t3lib_extMgm::addPlugin(array('LLL:EXT:ke_forum/locallang_db.xml:tt_content.list_type_pi9', $_EXTKEY.'_mvc9'),'list_type');
 
 
