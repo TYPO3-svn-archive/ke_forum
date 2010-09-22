@@ -66,7 +66,7 @@
 			<label index="tt_content.list_type_pi3">Forum: Beitragsansicht</label>
 			<label index="tt_content.list_type_pi4">Forum: Suche</label>
 			<label index="tt_content.list_type_pi5">Forum: Teaser</label>
-			<label index="tt_content.list_type_pi6">Fourm: Moderation</label>
+			<label index="tt_content.list_type_pi6">Forum: Moderation</label>
 			<label index="tt_content.list_type_pi7">Forum: Cronjob</label>
 			<label index="tt_content.list_type_pi8">Forum: Beitrag hinzufügen</label>
 			<label index="tt_content.list_type_pi9">Forum: Thema hinzufügen</label>
