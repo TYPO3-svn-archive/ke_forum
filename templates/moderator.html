@@ -27,10 +27,10 @@
 		    <div class="singleThreadContainer">
 		      <div class="singleThreadAuthor">
 			{if $row._author.0}
-			  <!--<a href="mailto:{$row._author.0.email}">-->{$row._author.0.username}<!--</a>--><br />
+			  <!--<a href="mailto:{$row._author.0.email}">-->{$row._author.0.first_name} {$row._author.0.last_name}<!--</a>--><br />
 			  <span class="bold">%%%moderate.member_since.0%%%</span> %%%moderate.member_since.1%%%  {$row._author.0.crdate|date_format:$dateFormatMember}<br />
 			  <span class="bold">%%%moderate.posts%%%:</span> {$row._author.0.numberOfPosts}<br />
-			  <a href="#" class="singleThreadPMLink">%%%moderate.pm_to%%% {$row._author.0.username}</a>
+			  <a href="#" class="singleThreadPMLink">%%%moderate.pm_to%%% {$row._author.0.first_name} {$row._author.0.last_name}</a>
 			{/if}
 		      </div>
 		    </div>

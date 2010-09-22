@@ -44,14 +44,14 @@
 								<div class="themeLink"><a href="{$row.url_category}">{$row._category.0.title}</a></div>
 							</td>
 							<td class="altCellSearchresult"><a href="{$row.url_thread}">{$row.title}</a></td>
-							<td>{$row._author.0.username}</td>
+							<td>{$row._author.0.first_name} {$row._author.0.last_name}</td>
 							<td>{$row.numberOfPosts}</td>
 							<td>{$row.views}</td>
 							<td class="lastCellSearchresult">
 								<div class="forumDateSearchresult">{$row.lastPost.0.tstamp|date_format:$dateFormat}</div><br/>
 								<div class="lastPostSearchresult">
 									{if $row.lastPost.0._author.0.username}
-										<span class="bold">{$row.lastPost.0._author.0.username}</span>
+										<span class="bold">{$row.lastPost.0._author.0.first_name} {$row.lastPost.0._author.0.last_name}</span>
 										<a href="{$row.url_last_post}"><img src="typo3conf/ext/ke_forum/res/img/forum_arrow_icon_{cycle values="bright,dark" name="icon_post"}.gif"/></a>
 									{/if}
 								</div>

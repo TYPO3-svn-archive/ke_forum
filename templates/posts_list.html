@@ -42,7 +42,7 @@
 					    <a name="post_{$row.uid}"/>
 					    <img src="typo3conf/ext/ke_forum/res/img/forum_singleThread_icon.gif"/>
 					    <div class="singleThreadAuthor"> 
-						<!--<a href="mailto:{$row._author.0.email}">-->{$row._author.0.username}<!--</a>--><br />
+						<!--<a href="mailto:{$row._author.0.email}">-->{$row._author.0.first_name} {$row._author.0.last_name}<!--</a>--><br />
 						<span class="bold">%%%posts.member_since.0%%%</span> %%%posts.member_since.1%%%  {$row._author.0.crdate|date_format:$dateFormatMember}<br />
 						<span class="bold">%%%posts.posts%%%:</span> {$row._author.0.numberOfPosts}<br />
 						<!-- <a href="#" class="singleThreadPMLink">Pers&ouml;nliche Nachricht an {$row._author.0.username}</a> -->

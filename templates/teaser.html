@@ -14,7 +14,7 @@
 	    <div id="teaserTextContainer">
 	       <a href="{$row.url_post}">{$row.content}</a><br />
 	       {$row._category.title}<br />
-	       {$row.tstamp|date_format:$dateFormat} <span class="bold"><!--<a href="mailto:{$row._author.0.email}" class="teaserTextContainerLink">-->{$row._author.0.username}<!--</a>--></span>
+	       {$row.tstamp|date_format:$dateFormat} <span class="bold"><!--<a href="mailto:{$row._author.0.email}" class="teaserTextContainerLink">-->{$row._author.0.first_name} {$row._author.0.last_name}<!--</a>--></span>
 	    </div>
 	    {if !$row.last}
 	       <img class="hrLine" src="typo3conf/ext/ke_forum/res/img/horizontal_line.gif" />

@@ -53,11 +53,11 @@
 				    <div class="themeLink"><a href="{$row.url_posts}">{$row.title}</a></div>
 				</td>
 				<td class="altCell">{$row.numberOfPosts}</td>
-				<td><!--<a href="mailto:{$row._author.0.email}">-->{$row._author.0.username}<!--</a>--></td>
+				<td><!--<a href="mailto:{$row._author.0.email}">-->{$row._author.0.first_name} {$row._author.0.last_name} <!--</a>--></td>
 				<td class="altCell">{$row.views}</td>
 				<td class="lastCell">
 				    <div class="forumDate"><a href="{$row.url_last_post}">{$row.lastPost.0.tstamp|date_format:$dateFormat}</a><br/>
-					{$row.lastPost.0._author.0.username}
+					 {$row.lastPost.0._author.0.first_name} {$row.lastPost.0._author.0.last_name}
 				    </div>
 				</td>
 			    </tr>

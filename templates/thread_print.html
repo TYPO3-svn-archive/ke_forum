@@ -15,7 +15,7 @@
 	{if $posts}
 	    {foreach item=row from=$posts}
 		<div class="post">
-		    <div class="head">{$row.tstamp|date_format:$dateFormat} | {$row._author.0.username} </div><!--| %%%posts.member_since.0%%%: %%%posts.member_since.1%%%  {$row._author.0.crdate|date_format:$dateFormatMember} | %%%posts.posts%%%: {$row._author.0.numberOfPosts}<hr />-->
+		    <div class="head">{$row.tstamp|date_format:$dateFormat} | {$row._author.0.first_name} {$row._author.0.last_name} </div><!--| %%%posts.member_since.0%%%: %%%posts.member_since.1%%%  {$row._author.0.crdate|date_format:$dateFormatMember} | %%%posts.posts%%%: {$row._author.0.numberOfPosts}<hr />-->
 		    <p class="content">{$row.content|nl2br}</p>
 		</div>
 	    {/foreach}

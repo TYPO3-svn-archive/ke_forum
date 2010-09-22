@@ -22,7 +22,7 @@
 		    <div class="cellCreateThread2  lastPost">
 			{foreach item=row from=$threads.0.lastPost key=i}
 			    <div class="latest-post">
-				<b>{$row.tstamp|date_format:$dateFormat}, {$row._author.0.username}</b><br />
+				<b>{$row.tstamp|date_format:$dateFormat}, {$row._author.0.first_name} {$row._author.0.last_name}</b><br />
 				{$row.content|nl2br}
 			    </div>
 			{/foreach}
